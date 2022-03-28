@@ -1,14 +1,18 @@
 {
   "Items": [
     {
-      "owner": "vlad",
-      "title": "",
-      "createDate":
+      "user": "polina",
+      "title": "food shopping",
+      "description": "a trip to Costco on Sunday",
+      "creationDate": "28-03-2022",
+      "completionDate":  "" 
     },
     {
       "owner": "vlad",
-      "title": "",
-      "createDate":
+      "title": "complete Blazor project",
+      "description": "MVP for my new client by end of April",
+      "creationDate": "27-03-2022",
+      "completionDate": ""
     }
   ]
 }
