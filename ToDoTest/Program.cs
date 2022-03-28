@@ -12,15 +12,12 @@ namespace ToDoTest
 
     public class Program
     {
-        private static ServiceProvider _serviceProvider;
+        // private static ServiceProvider _serviceProvider;
         public static void Main(string[] args)
         {
             //CreateDI();
             //var worker = _serviceProvider.GetService<Worker>();
             //worker.Test();
-
-
-
         }
 
 
@@ -42,13 +39,14 @@ namespace ToDoTest
         public DateTime? CompletionDate { get; set; }
         public bool IsCompleted { get; set; }
         public string User { get; private set; }
-        private ToDoController _todoController { get; set;}
+        // private ToDoController _todoController { get; set;}
 
         public ToDo(string title, string description, string user)
         {
             Title = title;
             Description = description;
             User = user;
+            IsCompleted = false;
         }
     }
 
@@ -75,14 +73,15 @@ namespace ToDoTest
     public class User
     {
         private string Username { get; set; }
-        private string _password { get; set; }
-        private UserController _userController { get; set; }
+        private string Password { get; set; }
+    // private UserController _userController { get; set; }
 
-        public User(string username, string password, UserController userController)
+    // inject UserController userController?
+    public User(string username, string password)
         {
             Username = username;
-            _password = password;
-            _userController = userController;
+            Password = password;
+            // _userController = userController;
         }
     }
 
@@ -108,4 +107,3 @@ namespace ToDoTest
             File.ReadAllText(filepath);
         }
     }
-}
